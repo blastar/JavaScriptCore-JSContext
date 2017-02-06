@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JSContextDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifP-sk-Ns6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="347"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cNR-IJ-MuN">
+                                <rect key="frame" x="16" y="387" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aSF-sI-I64"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textfieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="5Mg-kX-yfQ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ifP-sk-Ns6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="F5a-1L-Rn7"/>
+                            <constraint firstAttribute="trailing" secondItem="ifP-sk-Ns6" secondAttribute="trailing" id="Hvy-lm-Mu1"/>
+                            <constraint firstItem="cNR-IJ-MuN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LPp-uT-KMG"/>
+                            <constraint firstItem="ifP-sk-Ns6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Zid-9I-PAj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ifP-sk-Ns6" secondAttribute="bottom" constant="300" id="lAI-Tv-oEX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cNR-IJ-MuN" secondAttribute="bottom" constant="250" id="n0T-L6-rQ6"/>
+                            <constraint firstItem="cNR-IJ-MuN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sOR-vU-dIR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textfield" destination="cNR-IJ-MuN" id="tlq-Sb-p0c"/>
+                        <outlet property="webview" destination="ifP-sk-Ns6" id="7vl-31-VVs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
